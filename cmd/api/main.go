@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"time"
 
-	"LogUp/internal/server"
+	"github.com/solo-securing/LogUp/internal/server"
 )
 
 func gracefulShutdown(apiServer *http.Server, done chan bool) {

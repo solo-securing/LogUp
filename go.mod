@@ -1,4 +1,4 @@
-module LogUp
+module github.com/solo-securing/LogUp
 
 go 1.24
 

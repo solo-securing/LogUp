@@ -1,0 +1,15 @@
+inputs:
+  - name: nginx_access_prod_tcp
+    protocol: tcp
+    listen_addr: "0.0.0.0:5140"
+    params:
+      type: logs
+      dataset: nginx_access
+      namespace: prod
+  - name: app_metrics_dev_udp
+    protocol: udp
+    listen_addr: "0.0.0.0:8125"
+    params:
+      type: metrics
+      dataset: app_performance
+      namespace: dev

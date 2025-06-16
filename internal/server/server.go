@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/joho/godotenv/autoload"
 
-	"LogUp/internal/database"
+	"github.com/solo-securing/LogUp/internal/database"
 )
 
 type Server struct {
