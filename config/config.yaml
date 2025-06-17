@@ -1,15 +1,20 @@
 inputs:
-  - name: nginx_access_prod_tcp
-    protocol: tcp
-    listen_addr: "0.0.0.0:5140"
-    params:
+  input_id_1:
+    type: tcp
+    addresses: 0.0.0.0:5514
+    data_stream:
       type: logs
       dataset: nginx_access
       namespace: prod
-  - name: app_metrics_dev_udp
-    protocol: udp
-    listen_addr: "0.0.0.0:8125"
-    params:
+  input_id_2:
+    type: udp
+    addresses: 0.0.0.0:5515
+    data_stream:
       type: metrics
-      dataset: app_performance
-      namespace: dev
+      dataset: windows_cpu
+      namespace: prod
+
+# File Lifecycle Management
+flm:
+  max_file_size: 100mb
+  max_file_age: 30d
